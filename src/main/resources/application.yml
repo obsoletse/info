@@ -2,6 +2,8 @@
 #¶Ë¿ÚºÅ
 server:
   port: 8080
+  servlet:
+    context-path: /info
 
 #Êý¾Ý¿â
 spring:
