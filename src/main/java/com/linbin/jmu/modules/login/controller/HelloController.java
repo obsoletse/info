@@ -21,9 +21,9 @@ public class HelloController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/test")
-    public String sayHello(){
-        return "hello springboot!";
+    @GetMapping("/test")
+    public Result sayHello(@RequestParam("username") String username){
+        return Result.ok(username + " hello springboot!");
     }
 
     /*@GetMapping(@RequestParam) //单纯获取数据
