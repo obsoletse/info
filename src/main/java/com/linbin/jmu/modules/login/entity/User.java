@@ -11,6 +11,7 @@ public class User {
     private Integer id;
     private String username;
     private String password;
+    private Boolean checked;
 
     public Integer getId() {
         return id;
@@ -34,5 +35,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Boolean getChecked() {
+        return checked;
+    }
+
+    public void setChecked(Boolean checked) {
+        this.checked = checked;
     }
 }

@@ -31,12 +31,6 @@ public class HelloController {
     @DeleteMapping //删除数据*/
     @PostMapping("/login") //提交数据
     public Result login(@RequestBody User user){
-        if (StringUtils.isNullOrEmpty(user.getUsername())){
-            return Result.error("用户名不能为空！");
-        }
-        if (StringUtils.isNullOrEmpty(user.getPassword())){
-            return Result.error("用户密码不能为空！");
-        }
         User newUser = userService.queryUserByNameAndPwd(user.getUsername(),user.getPassword());
         if (newUser != null){
             return Result.ok("登录成功！");
